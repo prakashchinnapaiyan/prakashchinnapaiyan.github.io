@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prakash Chinnapaiyan · Senior Product Design Engineer, PMP</title>
+<meta name="description" content="Prakash Chinnapaiyan: Senior Product Design Engineer and PMP at Mercedes-Benz R&D India. Body-in-White structures, program governance, 3 patent applications.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Hanken+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0B0F15; --ink2:#111823; --bone:#EEEAE1; --panel:#F8F5EE;
+  --on-ink:#E9E6DD; --dim-ink:#9AA4B2; --on-bone:#171A20; --dim-bone:#5C6068;
+  --steel:#7FA8CF; --steel-d:#2E5E8E; --amber:#D4A24C;
+  --line-ink:rgba(233,230,221,.14); --line-bone:rgba(23,26,32,.15);
+  --serif:"Fraunces",Georgia,serif; --sans:"Hanken Grotesk",system-ui,sans-serif; --mono:"Space Mono",ui-monospace,monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--ink);color:var(--on-ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+::selection{background:var(--amber);color:var(--ink)}
+.wrap{max-width:1160px;margin:0 auto;padding:0 28px}
+section[id]{scroll-margin-top:70px}
+.ink{background:var(--ink);color:var(--on-ink)}
+.bone{background:var(--bone);color:var(--on-bone)}
+.grid-bg{background-image:linear-gradient(rgba(127,168,207,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(127,168,207,.05) 1px,transparent 1px);background-size:44px 44px}
+.pad{padding:clamp(70px,10vw,130px) 0}
+.mono{font-family:var(--mono);font-size:12px;letter-spacing:.12em}
+.dim-ink{color:var(--dim-ink)} .dim-bone{color:var(--dim-bone)}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,4.4vw,3.2rem);line-height:1.05;letter-spacing:-.015em;margin:10px 0 14px}
+.lead{max-width:60ch;font-size:1.05rem}
+
+/* nav */
+nav{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:16px 28px;transition:.35s;border-bottom:1px solid transparent}
+nav.on{background:rgba(11,15,21,.85);backdrop-filter:blur(12px);border-bottom-color:var(--line-ink);padding:11px 28px}
+.mark{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:13px;letter-spacing:.1em}
+.mark b{width:34px;height:34px;border:1px solid var(--steel);border-radius:50%;display:grid;place-items:center;font:600 15px var(--serif);color:var(--steel)}
+.links{display:flex;gap:26px}
+.links a{font:400 11.5px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--dim-ink);transition:color .2s}
+.links a:hover{color:var(--on-ink)}
+.cta{font:400 11px var(--mono);letter-spacing:.12em;border:1px solid var(--line-ink);padding:9px 16px;border-radius:30px;transition:.2s}
+.cta:hover{background:var(--on-ink);color:var(--ink)}
+@media(max-width:860px){.links{display:none}}
+
+/* hero */
+.hero{min-height:100vh;display:flex;align-items:center;padding:100px 0 60px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(110% 80% at 85% 0%,rgba(46,94,142,.25),transparent 55%),radial-gradient(70% 60% at 0% 100%,rgba(212,162,76,.08),transparent 60%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.3fr .8fr;gap:56px;align-items:center}
+.hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(3rem,7.4vw,5.8rem);line-height:.98;letter-spacing:-.025em}
+.hero h1 em{display:block;font-weight:400;color:var(--steel)}
+.role{margin:22px 0 24px;color:var(--dim-ink);text-transform:uppercase;letter-spacing:.16em}
+.hero p{max-width:54ch;color:#CDD2DA;font-size:1.08rem}
+.chips{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:30px;font:400 12px var(--mono);color:var(--dim-ink)}
+.chips span::before{content:"";display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--amber);margin-right:8px;vertical-align:middle}
+.photo{position:relative;max-width:380px;justify-self:end;width:100%}
+.photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:68% 30%;border:1px solid var(--line-ink);filter:contrast(1.03)}
+.photo::before{content:"";position:absolute;top:-12px;right:-12px;width:46px;height:46px;border-top:2px solid var(--steel);border-right:2px solid var(--steel)}
+.photo::after{content:"";position:absolute;bottom:-12px;left:-12px;width:46px;height:46px;border-bottom:2px solid var(--amber);border-left:2px solid var(--amber)}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr;gap:44px}.photo{justify-self:start;max-width:300px}}
+.in{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.in.d1{animation-delay:.12s}.in.d2{animation-delay:.24s}.in.d3{animation-delay:.36s}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+
+/* stats */
+.stats{border-block:1px solid var(--line-ink)}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:38px 24px;border-right:1px solid var(--line-ink)}
+.stat:last-child{border:0}
+.stat b{display:block;font:400 clamp(2rem,4vw,2.9rem)/1 var(--serif)}
+.stat b i{font-style:normal;color:var(--steel)}
+.stat span{display:block;margin-top:12px;font:400 11px var(--mono);letter-spacing:.1em;color:var(--dim-ink)}
+@media(max-width:680px){.stats .wrap{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:0}.stat{border-bottom:1px solid var(--line-ink)}}
+
+/* expertise */
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-bone);border:1px solid var(--line-bone);margin-top:48px}
+.col{background:var(--panel);padding:30px 28px}
+.col h3{font:500 1.35rem/1.2 var(--serif);margin-bottom:10px}
+.col p{font-size:.97rem;color:var(--dim-bone)}
+.tools{margin-top:34px;display:flex;flex-wrap:wrap;gap:10px}
+.tools span{font:400 12px var(--mono);border:1px solid var(--line-bone);padding:7px 13px;border-radius:30px;background:var(--panel)}
+@media(max-width:860px){.cols{grid-template-columns:1fr}}
+
+/* experience */
+.tl{margin-top:54px;position:relative}
+.tl::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:1px;background:var(--line-ink)}
+.job{position:relative;padding:0 0 56px 42px}
+.job:last-child{padding-bottom:0}
+.job::before{content:"";position:absolute;left:0;top:7px;width:15px;height:15px;border:2px solid var(--steel);border-radius:50%;background:var(--ink)}
+.job.now::before{background:var(--amber);border-color:var(--amber)}
+.when{color:var(--amber)}
+.job h3{font:400 clamp(1.4rem,2.6vw,1.9rem)/1.15 var(--serif);margin:6px 0 4px}
+.org{color:var(--dim-ink);font-size:.98rem}
+.job ul{list-style:none;margin-top:18px;max-width:78ch;display:grid;gap:12px}
+.job li{padding-left:20px;position:relative;color:#CBD0D8;font-size:.98rem}
+.job li::before{content:"";position:absolute;left:0;top:.7em;width:8px;height:1px;background:var(--steel)}
+
+/* patents / edu */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:48px}
+.item{padding:22px 0;border-top:1px solid var(--line-bone)}
+.item:last-child{border-bottom:1px solid var(--line-bone)}
+.item h4{font:500 1.2rem/1.25 var(--serif)}
+.item p{color:var(--dim-bone);font-size:.95rem;margin-top:4px}
+.sub{font:400 12px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--steel-d)}
+@media(max-width:860px){.two{grid-template-columns:1fr;gap:44px}}
+
+/* recognition */
+.rec{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:46px}
+.rec ul{list-style:none;margin-top:14px;display:grid;gap:12px}
+.rec li{font-size:.97rem;color:#CBD0D8;padding-bottom:12px;border-bottom:1px solid var(--line-ink)}
+.rec li small{display:block;color:var(--dim-ink);font:400 11.5px var(--mono);margin-top:2px}
+@media(max-width:860px){.rec{grid-template-columns:1fr;gap:36px}}
+
+/* contact */
+.contact{text-align:left}
+.contact a.mail{display:inline-block;font:300 clamp(1.5rem,4.2vw,3rem)/1.1 var(--serif);border-bottom:1px solid var(--amber);padding-bottom:6px;margin-top:22px;word-break:break-all}
+.contact a.mail:hover{color:var(--amber)}
+.btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.btn{font:400 12px var(--mono);letter-spacing:.1em;border:1px solid var(--line-ink);padding:12px 20px;border-radius:30px;transition:.2s}
+.btn:hover{background:var(--on-ink);color:var(--ink)}
+footer{padding:28px 0;border-top:1px solid var(--line-ink);font:400 11.5px var(--mono);color:var(--dim-ink)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="#top" class="mark"><b>PC</b><span>PRAKASH C</span></a>
+  <div class="links">
+    <a href="#expertise">Expertise</a><a href="#experience">Experience</a><a href="#credentials">Credentials</a><a href="#recognition">Recognition</a>
+  </div>
+  <a href="#contact" class="cta">Get in touch</a>
+</nav>
+
+<header class="ink grid-bg hero" id="top">
+  <div class="wrap">
+    <div>
+      <h1 class="in">Prakash <em>Chinnapaiyan</em></h1>
+      <div class="role mono in d1">Senior Product Design Engineer · PMP®</div>
+      <p class="in d2">I lead Body-in-White structural programs for Mercedes-Benz, keeping scope, schedule, and design quality aligned across Safety, Manufacturing, NVH, and Cost. Eight years in automotive engineering with BMW and Mercedes-Benz, now filing patents on the next generation of EV body structures.</p>
+      <div class="chips in d3"><span>Bengaluru &amp; Vellore, India</span><span>S-Class, GLE/GLS</span><span>PMP certified</span></div>
+    </div>
+    <div class="photo in d2"><img src="profile.jpg" alt="Portrait of Prakash Chinnapaiyan"></div>
+  </div>
+</header>
+
+<section class="ink stats" aria-label="Highlights">
+  <div class="wrap">
+    <div class="stat"><b>8<i>+</i></b><span>Years in automotive engineering</span></div>
+    <div class="stat"><b>3</b><span>Patent applications filed, 2025</span></div>
+    <div class="stat"><b>20<i>%</i></b><span>Faster component construction via CATIA macros</span></div>
+    <div class="stat"><b>3</b><span>Mercedes-Benz Star Bronze awards</span></div>
+  </div>
+</section>
+
+<section class="bone pad" id="expertise">
+  <div class="wrap">
+    <div class="mono dim-bone">What I bring</div>
+    <h2>Engineering depth, run with<br>program discipline.</h2>
+    <p class="lead dim-bone">I work where the CAD model, the plant, and the project plan meet, so structural designs get released on time and can actually be built.</p>
+    <div class="cols">
+      <div class="col"><h3>Program &amp; design governance</h3><p>Scope, milestones, risk, and RACI-based stakeholder management across cross-functional teams, using PMBOK practices and formal change control.</p></div>
+      <div class="col"><h3>Body-in-White structures</h3><p>Upper and underbody architectures, door ring and firewall concepts, EV/ICE platform commonization, and assembly sequencing for faster production.</p></div>
+      <div class="col"><h3>Digitization &amp; automation</h3><p>CATIA V5 VBA macros and an automated RFQ evaluation tool that cut manual effort and sped up vendor responses.</p></div>
+    </div>
+    <div class="tools" aria-label="Tools"><span>CATIA V5 + VBA</span><span>Siemens NX</span><span>Creo</span><span>SAP ERP</span><span>MS Project</span><span>Excel</span><span>PowerPoint</span><span>DFM</span><span>Lean</span><span>PLM</span></div>
+  </div>
+</section>
+
+<section class="ink grid-bg pad" id="experience">
+  <div class="wrap">
+    <div class="mono dim-ink">Experience</div>
+    <h2>From wind turbines to the S-Class.</h2>
+    <div class="tl">
+      <article class="job now">
+        <div class="mono when">Feb 2023 – Present</div>
+        <h3>Senior Product Design Engineer, Program &amp; Design Governance Lead</h3>
+        <div class="org">Mercedes-Benz R&amp;D India, Bengaluru · S-Class, GLE/GLS</div>
+        <ul>
+          <li>Lead full-lifecycle delivery of BIW structural components, coordinating scope, timeline, and quality gates across multi-disciplinary teams.</li>
+          <li>Direct governance across Safety, Manufacturing, NVH, and Cost to hold milestones and design alignment, applying PMP stakeholder and risk practices.</li>
+          <li>Drive digitization and lean initiatives that improve efficiency and shorten component development cycle time.</li>
+          <li>Lead EV benchmarking and platform commonization studies, aligning architecture decisions across EV and ICE variants.</li>
+          <li>Manage structural changes through formal change control, optimizing BIW assembly sequencing to speed up production.</li>
+        </ul>
+      </article>
+      <article class="job">
+        <div class="mono when">Oct 2020 – Feb 2023</div>
+        <h3>Senior Engineer, Technical Project Lead</h3>
+        <div class="org">RLE India Pvt. Ltd., Bengaluru · BMW G6X/7X, G65, C16</div>
+        <ul>
+          <li>Owned the technical roadmap and design release schedule for BIW upper and underbody architectures, from pre-concept to Concept Fixing, to BMW Group standards.</li>
+          <li>Coordinated Safety, Manufacturing, NVH, and Cost to resolve design conflicts and keep designs manufacturable.</li>
+          <li>Set up project governance processes and PM documentation standards across projects (35 PDUs completed).</li>
+          <li>Built 12 custom CATIA V5 VBA macros that cut component construction time by 20%.</li>
+          <li>Engineered an automated RFQ evaluation tool that improved vendor response accuracy and turnaround.</li>
+        </ul>
+      </article>
+      <article class="job">
+        <div class="mono when">May 2016 – Aug 2018</div>
+        <h3>Design Engineer</h3>
+        <div class="org">Vestas Wind Technology India, Chennai</div>
+        <ul>
+          <li>Technical authority for sheet metal product development, building complex CAD models and multi-part assemblies to global DFM guidelines.</li>
+          <li>Built and led a three-engineer team on advanced NDT and root cause analysis of structural subsystems, reporting to senior stakeholders.</li>
+          <li>Managed configuration control and BOM lifecycle data in SAP ERP.</li>
+          <li>Worked with the Site Project Manager on a 94 MW wind turbine installation, owning site scheduling, resource allocation, and risk mitigation for on-time delivery.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="bone pad" id="credentials">
+  <div class="wrap">
+    <div class="mono dim-bone">Credentials</div>
+    <h2>Patents, degrees, and certifications.</h2>
+    <div class="two">
+      <div>
+        <div class="sub">Patent applications</div>
+        <div class="item"><h4>A Side Sill for Door Ring Structure in Electric Vehicles</h4><p>Application no. 202511118198 · 2025</p></div>
+        <div class="item"><h4>Split Firewall (Body Frame)</h4><p>Application no. 202541125197 · 2025</p></div>
+        <div class="item"><h4>SMOL Arrangement (Body Frame)</h4><p>Application no. 202541128835 · 2025</p></div>
+        <div class="sub" style="margin-top:44px">Education</div>
+        <div class="item"><h4>Postgraduate Degree, Tool Engineering</h4><p>NTTF School of Postgraduate Studies, Bengaluru · 2018–2020<br>CGPA 8.9/10 · Distinction · Institute Rank 1</p></div>
+        <div class="item"><h4>B.E. Mechanical Engineering</h4><p>Ganadipathy Tulsi's Jain Engineering College, Anna University · 2011–2015<br>CGPA 8.936/10 · Distinction · University Rank 29</p></div>
+      </div>
+      <div>
+        <div class="sub">Certifications</div>
+        <div class="item"><h4>Project Management Professional (PMP®)</h4><p>Valid Jul 2026 – Jul 2029</p></div>
+        <div class="item"><h4>Product Design and Manufacturing</h4><p>NPTEL, IIT Kanpur · 12 weeks, 2019 · Score 89%</p></div>
+        <div class="item"><h4>German B2.1</h4><p>Mercedes-Benz · 2024</p></div>
+        <div class="item"><h4>Business Communication</h4><p>Lecturio Weiterbildungs · Jun 2022</p></div>
+        <div class="item"><h4>Time Management</h4><p>Centum Learning · Jun 2022</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ink grid-bg pad" id="recognition">
+  <div class="wrap">
+    <div class="mono dim-ink">Recognition &amp; languages</div>
+    <h2>Work that got noticed.</h2>
+    <div class="rec">
+      <div><div class="sub" style="color:var(--steel)">Awards</div><ul>
+        <li>Star Bronze Award, Mercedes-Benz<small>Q3 2023, Q4 2024, Q4 2025</small></li>
+        <li>Super Achiever of the Year, RLE India<small>STAR-2021</small></li>
+        <li>Best Performer Award, GTEC Kaniyambadi<small>2015</small></li></ul></div>
+      <div><div class="sub" style="color:var(--steel)">Academic</div><ul>
+        <li>First Rank, PGTE School of Postgraduate Studies<small>Bengaluru, 2020</small></li>
+        <li>University Rank 29, Anna University<small>B.E. Mechanical, 2015</small></li></ul></div>
+      <div><div class="sub" style="color:var(--steel)">Languages</div><ul>
+        <li>Tamil<small>Native</small></li><li>English<small>Proficient</small></li>
+        <li>German<small>Intermediate</small></li><li>Hindi<small>Beginner</small></li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="bone pad contact" id="contact">
+  <div class="wrap">
+    <div class="mono dim-bone">Contact</div>
+    <h2>Let's talk about your next program.</h2>
+    <p class="lead dim-bone">Open to travel, relocation, and shift work. Email is the fastest way to reach me.</p>
+    <a class="mail" href="mailto:c.prakash970@gmail.com">c.prakash970@gmail.com</a>
+    <div class="btns">
+      <!-- TODO: replace with your full LinkedIn profile URL -->
+      <a class="btn" style="border-color:var(--line-bone)" href="https://www.linkedin.com/in/YOUR-LINKEDIN-ID" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer class="ink"><div class="wrap">© 2026 Prakash Chinnapaiyan</div></footer>
+
+<script>
+const nav=document.getElementById('nav');
+const f=()=>nav.classList.toggle('on',scrollY>30);
+addEventListener('scroll',f,{passive:true});f();
+</script>
+</body>
+</html>
